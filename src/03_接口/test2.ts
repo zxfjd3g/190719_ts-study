@@ -2,13 +2,16 @@
 接口可以描述函数类型
 */
 (() => {
-  interface SearchFunc {
-    (source: string, subString: string): boolean 
+  
+  /* 定义一个函数接口 */
+  interface SearchFun {
+    (sourceStr: string, str: string): boolean 
   }
 
-  const mySearch: SearchFunc = (str: string, subStr): boolean => {
-    return str.search(subStr) !== -1
+  const search: SearchFun = (sourceS: string, s: string): boolean => {
+    return sourceS.indexOf(s)!==-1
   }
 
-  console.log(mySearch('abcd', 'bc'))
+  console.log(search('abcd', 'bc'), search('abcd', 'cb'))
+
 })()

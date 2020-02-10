@@ -5,63 +5,66 @@
 
 */
 (function () {
-
-  // 定义一个鸣笛的接口
+  // 鸣笛的接口
   interface Alarm {
     alert(): any
   }
-
-  // 定义灯的接口
+  // 灯的接口
   interface Light {
-    lightOn (): void // 开灯
-    lightOff (): void // 关灯
+    lightOn (): void
+    lightOff (): void
   }
 
-  // 定义一个类实现一个接口: 必须实现接口中定义的方法
+  /* 定义一个类, 实现一个接口 */
   class Car implements Alarm {
-    alert () {
+    alert(): any {
       console.log('Car alert()')
     }
   }
 
-  new Car().alert()
-
+  /* 定义一个类, 实现多个接口 */
   class Car2 implements Alarm, Light {
-    alert () {
+    alert(): any {
       console.log('Car2 alert()')
     }
 
     lightOn (): void {
       console.log('Car2 lightOn()')
     }
-
     lightOff (): void {
       console.log('Car2 lightOff()')
     }
   }
+
+  new Car().alert()
   const car2 = new Car2()
   car2.alert()
   car2.lightOn()
   car2.lightOff()
 
-  // 一个接口可以继承自多个接口
+  /* 一个接口继承于多个接口 */
   interface LightableAlarm extends Alarm, Light {
 
   }
 
   class Car3 implements LightableAlarm {
-    alert () {
+    alert(): any {
       console.log('Car3 alert()')
     }
 
     lightOn (): void {
       console.log('Car3 lightOn()')
     }
-
+    
     lightOff (): void {
       console.log('Car3 lightOff()')
     }
   }
+
+  const car3 = new Car3()
+  car3.alert()
+  car3.lightOn()
+  car3.lightOff()
 
 })()
 

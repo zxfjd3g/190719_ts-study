@@ -16,28 +16,23 @@
 */
 
 (function () {
+
+  // 定义人的接口
   interface IPerson {
-    readonly id: number
+    readonly id: number;
     name: string
     age: number
     sex?: string
   }
-
-  const p1: IPerson = {
-    id: 1,
-    name: 'jack',
-    age: 11,
-    sex: '男'
-  }
-
-  const p2: IPerson = {
-    id: 2,
+  
+  const user: IPerson = {
+    // id: '12', // error 类型不匹配
+    id: 12,
     name: 'tom',
-    age: 12,
-    // sex: '男' // 可以没有, 其它3个属性不能少
-    // xxx: 12  // error 没有在接口中声明的属性不能有
+    age: 23,
+    // sex: '男'  // 可以没有
   }
 
-  // p.id = 2 // error 不能重新赋值
-  console.log(p1, p2)
+  // user.id = 13  // error, id是只读的, 不能再次赋值
+
 })()
