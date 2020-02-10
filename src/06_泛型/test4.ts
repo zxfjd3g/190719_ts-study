@@ -3,21 +3,19 @@
 */
 
 (() => {
-  // 没有泛型约束
-  function fn <T>(x: T): void {
-    // console.log(x.length)  // error
+  function fn <T>(t: T): void {
+    // console.log(t.length) // error 不确定t有length属性
   }
 
   interface Lengthwise {
-    length: number;
+    length: number
   }
 
-  // 指定泛型约束
-  function fn2 <T extends Lengthwise>(x: T): void {
-    console.log(x.length)
+  function fn2 <T extends Lengthwise>(t: T): void {
+    console.log(t.length)
   }
 
-  fn2('abc')
-  // fn2(123) // error  number没有length属性
-  
+  console.log(fn2('abc')) // string有length属性
+  // console.log(fn2(123))  // error number没有length属性
+
 })()

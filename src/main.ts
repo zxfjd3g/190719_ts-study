@@ -23,7 +23,7 @@
 // import './05_函数/test3'
 
 // import './06_泛型/test1'
-import './06_泛型/test2'
+// import './06_泛型/test2'
 
 
 
