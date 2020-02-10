@@ -16,7 +16,12 @@
 // import './04_类/test5'
 // import './04_类/test6'
 // import './04_类/test7'
-import './04_类/test8'
+// import './04_类/test8'
+
+// import './05_函数/test1'
+import './05_函数/test2'
+
+
 
 
 
