@@ -25,6 +25,6 @@
 // import './06_泛型/test1'
 // import './06_泛型/test2'
 
-
+import './07_其它/01_声明文件'
 
 document.write('Hello Webpack TS!')

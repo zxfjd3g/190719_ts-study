@@ -15,8 +15,6 @@
     Event
     NodeList
 */
-
-/* 1. ECMAScript 的内置对象 */
-
-
-/* 2. BOM 和 DOM 的内置对象 */
+(() => {
+  
+})()
